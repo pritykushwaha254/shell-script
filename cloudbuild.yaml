@@ -1,0 +1,16 @@
+steps:
+  # Step 1: Clone your GitHub repository
+  - name: 'gcr.io/cloud-builders/git'
+    entrypoint: 'bash'
+    args: [
+      "-c",
+      "git clone https://github.com/pritykushwaha254/shell-script.git && cd shell-script"
+    ]
+
+  # Step 2: Execute the `oodles.sh` script
+  - name: 'ubuntu'
+    entrypoint: 'bash'
+    args: [
+      "-c",
+      "chmod +x oodles.sh && ./oodles.sh"
+    ]
